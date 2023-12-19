@@ -1,34 +1,45 @@
 <!DOCTYPE html>
 <html lang="en">
+
 <head>
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <link rel="stylesheet" href="estilos.css">
+    <script src="https://cdn.jsdelivr.net/npm/sweetalert2@11"></script>
     <title>Sistema de control de stock</title>
 </head>
+
 <body>
-    <h1 class="titulo">Control de Stock de limpieza</h1>
+    <header>
+        <h1 class="titulo">Bienvenidos a Control de Stock</h1>
+    </header>
 
-    
-    <div class="cajabuscar">
-        <h2>Buscador de productos</h2>
-        <input class="filtrar" type="text" id="filtrar1" placeholder="Producto que desea buscar">
-        <button class="botonfiltrar" id="botonfiltrar">Buscar</button>
-    </div>
-    
-    <div class="cajaagregar">
-        <h2>Agregar producto nuevo</h2>
-        <label for="newProductName">Nombre del producto:</label>
-        <input type="text" id="productonuevo" placeholder="Nombre del producto">
-        <label for="newProductPrice">Precio del producto:</label>
-        <input type="number" id="precionuevo" placeholder="Ingresa precio">
-        <label for="newProductStock">Cantidad del producto:</label>
-        <input type="number" id="cantidadnueva" placeholder="Ingresa Cantidad">
-        <button class="botonagregar" id="botonagregar">Agregar producto al stock</button>
-    </div>
+    <main>
+        <div class="cajabuscar">
+            <input type="text" id="filtrar2" placeholder="Buscar por nombre">
+            <button class="botonfiltrar2" id="botonfiltrar2" type="button">buscar</button>
 
 
+            <div id="resultados-container"></div>
+        </div>
+        
 
+        <div class="cajaagregar">
+            <h2>Agregar producto nuevo</h2>
+            <label for="newProductName">Nombre del producto:</label>
+            <input type="text" id="productonuevo" placeholder="Nombre del producto">
+            <label for="newProductPrice">Precio del producto:</label>
+            <input type="number" id="precionuevo" placeholder="Ingresa precio">
+            <label for="newProductStock">Cantidad del producto:</label>
+            <input type="number" id="cantidadnueva" placeholder="Ingresa Cantidad">
+            <button class="botonagregar" id="botonagregar">Agregar producto al stock</button>
+        </div>
+
+    </main>
+
+    <footer class="pie">
+<h2>Creado por Maktub87</h2>
+    </footer>
 
 
 
@@ -36,4 +47,5 @@
 
     <script src="main.js"></script>
 </body>
+
 </html>
