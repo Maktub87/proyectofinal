@@ -61,6 +61,7 @@ function ProductoLimpieza(nombre, precio, stock) {
     this.nombre = nombre;
     this.precio = precio;
     this.stock = stock;
+
 }
 
 let producto1 = new ProductoLimpieza("Detergente", 1200, 67);
@@ -76,12 +77,14 @@ let producto10 = new ProductoLimpieza("Trapo de piso", 500, 22);
 let producto11 = new ProductoLimpieza("Papel Higienico", 2000, 300);
 let producto12 = new ProductoLimpieza("Esponja", 300, 100);
 
-let listaLimpieza = [producto1, producto2, producto3, producto4, producto5, producto6, producto7, producto8, producto9, producto10, producto11, producto12];
+let listaLimpieza = [producto1, producto2, producto3, producto4, producto5, producto6, producto7, producto8, producto9, producto10, producto11, producto12,];
+
+
 
 if (localStorage.getItem("productoLimpieza")) {
     listaLimpieza = JSON.parse(localStorage.getItem("productoLimpieza"));
 } else {
-    listaLimpieza = listaLimpieza;
+    listaLimpieza = listaLimpieza
 }
 
 function buscarConAcciones() {
@@ -132,7 +135,7 @@ function displaySearchResultsConAcciones(resultado) {
         container.appendChild(card);
     });
 
-    document.getElementById("resultados-container").innerHTML = ""; 
+    document.getElementById("resultados-container").innerHTML = "";
     document.getElementById("resultados-container").appendChild(container);
 }
 
@@ -154,7 +157,7 @@ function deleteProduct(index) {
                 title: 'Producto eliminado',
                 text: 'El producto ha sido eliminado correctamente.',
                 icon: 'success'
-            }).then(() =>{
+            }).then(() => {
                 updateLocalStorageAndDisplay();
             });
         }
@@ -189,7 +192,7 @@ function modifyProduct(index) {
                 title: 'Producto modificado',
                 text: 'El producto ha sido modificado correctamente.',
                 icon: 'success'
-            }).then(() =>{
+            }).then(() => {
                 updateLocalStorageAndDisplay();
             });
         }
@@ -198,7 +201,7 @@ function modifyProduct(index) {
 
 function updateLocalStorageAndDisplay() {
     localStorage.setItem("productoLimpieza", JSON.stringify(listaLimpieza));
-    
+
 }
 
 function agregarproductos() {
@@ -237,5 +240,6 @@ filtrarBoton3.addEventListener("click", buscarConAcciones);
 
 
 iniciarPagina();
+
 
 

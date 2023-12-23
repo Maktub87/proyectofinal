@@ -5,6 +5,7 @@
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <link rel="stylesheet" href="estilos.css">
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/animate.css/4.1.1/animate.min.css" />
     <script src="https://cdn.jsdelivr.net/npm/sweetalert2@11"></script>
     <title>Sistema de control de stock</title>
 </head>
@@ -15,7 +16,7 @@
         <h1 class="titulo">Bienvenidos a Control de Stock</h1>
         <img class="imagenheader" src="images/vidrio.jpeg" alt="imagendelimpiavidrios">
     </header>
-    
+
     <main>
 
         <div class="cajabuscar">
@@ -25,7 +26,7 @@
 
             <div id="resultados-container"></div>
         </div>
-        
+
 
         <div class="cajaagregar">
             <h2>Agregar producto nuevo</h2>
@@ -41,14 +42,22 @@
     </main>
 
     <footer class="pie">
-<h2>Creado por Maktub87</h2>
+        <h2>Creado por Maktub87</h2>
+        <div class=animate__backInRight>
+            <div class="container"></div>
+            <div class="icon"></div>
+            <div class="temp">-ºC</div>
+            <div class="descripcion"></div>
+            <div class="ubicacion"></div>
+        </div>
+
     </footer>
 
 
 
 
-
     <script src="main.js"></script>
+    <script src="api.js"></script>
 </body>
 
 </html>
