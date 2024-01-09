@@ -90,17 +90,35 @@ if (localStorage.getItem("productoLimpieza")) {
 function buscarConAcciones() {
     const input = document.getElementById("filtrar2");
     const palabraClave = input.value.trim().toUpperCase();
-    const resultado = listaLimpieza.filter(productoLimpieza => productoLimpieza.nombre.toUpperCase().includes(palabraClave));
 
-    if (resultado.length > 0) {
-        displaySearchResultsConAcciones(resultado);
-    } else {
-        Swal.fire({
-            title: 'Producto no encontrado',
-            text: 'No hay productos que coincidan con la búsqueda.',
-            icon: 'warning',
+    
+    const apiUrl = "productos.json";
+
+    
+    fetch(apiUrl)
+        .then(response => response.json())
+        .then(data => {
+            
+            const todosLosProductos = [...listaLimpieza, ...data.productos];
+
+            
+            const resultado = todosLosProductos.filter(producto =>
+                producto.nombre.toUpperCase().includes(palabraClave)
+            );
+
+            if (resultado.length > 0) {
+                displaySearchResultsConAcciones(resultado);
+            } else {
+                Swal.fire({
+                    title: 'Producto no encontrado',
+                    text: 'No hay productos que coincidan con la búsqueda.',
+                    icon: 'warning',
+                });
+            }
+        })
+        .catch(error => {
+            console.error('Error al realizar la solicitud a la API:', error);
         });
-    }
 }
 
 function displaySearchResultsConAcciones(resultado) {

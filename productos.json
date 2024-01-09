@@ -1,0 +1,60 @@
+{
+    "productos":
+
+    [
+        {
+            "nombre": "Detergente líquido",
+            "precio": 599,       
+            "stock": 100
+        },
+        {
+    
+            "nombre": "Esponja multiusos",
+            "precio": 149,
+            "stock": 200
+        },
+        {
+            "nombre": "Toallas de papel",
+            "precio": 299,
+            "stock": 150
+        },
+        {
+            "nombre": "Limpiacaños",
+            "precio": 399,
+            "stock": 80
+        },
+        {
+            "nombre": "Bolsas de basura",
+            "precio": 449,
+            "stock": 120
+        },
+        {
+            "nombre": "Desinfectante en aerosol",
+            "precio": 699,
+            "stock": 90
+        },
+        {
+            "nombre": "recogedor",
+            "precio": 879,
+            "stock": 70
+        },
+        {
+            "nombre": "Jabón en barra",
+            "precio": 199,
+            "stock": 180
+        },
+        {
+            "nombre": "Guantes de esponja",
+            "precio": 329,
+            "stock": 120
+        },
+        {
+            "nombre": "Cepillo para inodoro",
+            "precio": 499,
+            "stock": 100
+        }
+    ]
+}
+
+
+
